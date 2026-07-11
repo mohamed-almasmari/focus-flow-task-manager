@@ -2,5 +2,6 @@
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "javascript.preferences.importModuleSpecifier": "relative",
-  "typescript.preferences.importModuleSpecifier": "relative"
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "liveServer.settings.port": 5501
 }
