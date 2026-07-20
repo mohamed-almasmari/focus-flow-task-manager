@@ -3,21 +3,23 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Textbox from "../components/Textbox.jsx";
 import Button from "../components/Button.jsx";
+import { useSelector } from "react-redux";
 
 const Login = () => {
+  const { user } = useSelector((state) => state.auth);
+  console.log(user);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const user = "";
-
   const navigate = useNavigate();
   const submitHandler = async (data) => {
     console.log(data);
     console.log("Sumbited By big mohamed");
   };
+  console.log(user);
   useEffect(() => {
     user && navigate("/dashboard");
   }, [user, navigate]);
@@ -79,11 +81,11 @@ const Login = () => {
               <span className="flex items-start text-5m text-gray-500 hover:text-blue-600 hover:underline cursor-pointer">
                 Forget Password
               </span>
-              <Button 
-                type ="submit"
+              <Button
+                type="submit"
                 label="Submit"
                 className="w-full h-10 bg-blue-700 text-white rounded-full"
-                />
+              />
             </div>
           </form>
         </div>
