@@ -17,7 +17,7 @@ const Sidebar = () => {
         to={el.link}
         onClick={closeSidebar}
         className={clsx(
-          "w-full lg:w-3/4 flex gap-2 px-3 py-2 rounded-full items-center text-gray-800 text-base hover:bg:-[#2564ed2d]",
+          "w-full lg:w-3/4 flex gap-2 px-3 py-2 rounded-full items-center text-gray-800 text-base hover:bg-[#2564ed2d]",
           path === el.link.split("/")[0] ? "bg-blue-700 text-neutral-100" : "",
         )}
       >
@@ -30,7 +30,7 @@ const Sidebar = () => {
     dispatch(setOpenSidebar(false));
   };
   return (
-    <div className="w-64 h-screen flex flex-col justify-between p-5 border-r border-gray-200">
+    <div className="w-64 h-full flex flex-col justify-between p-5 border-r border-gray-200">
       <h1 className="flex gap-1 items-center">
         <p className="bg-blue-600 p-2 rounded-full">
           <MdOutlineAddTask className="text-white text-2xl font-black" />
